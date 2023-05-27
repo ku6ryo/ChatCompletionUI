@@ -1,10 +1,10 @@
 "use client"
-import { MouseEventHandler, useEffect, useMemo, useRef, useState } from 'react'
-import styles from './page.module.scss'
-import { throttle } from 'throttle-debounce'
-import { checkApiKey, countTokens, getChatCompletion } from '@/utils/api'
-import { OpenAiMessage } from '@/types/OpenAiMessage'
-import { deleteApiKey, deleteSysMessage, getApiKey, getSysMessage, saveApiKey, saveSysMessage } from '@/utils/storage'
+import { MouseEventHandler, useEffect, useMemo, useRef, useState } from "react"
+import styles from "./page.module.scss"
+import { throttle } from "throttle-debounce"
+import { checkApiKey, countTokens, getChatCompletion } from "@/utils/api"
+import { OpenAiMessage } from "@/types/OpenAiMessage"
+import { deleteApiKey, deleteSysMessage, getApiKey, getSysMessage, saveApiKey, saveSysMessage } from "@/utils/storage"
 import { GrRobot, GrUserManager, GrSend, GrKey } from "react-icons/gr"
 import classnames from "classnames"
 
@@ -16,9 +16,9 @@ export default function Home() {
   const [apiKey, setApiKey] = useState("")
   const [apiKeyValid, setApiKeyValid] = useState(false)
   const [sysTextTokens, setSysTextTokens] = useState(0)
-  const [sysText, setSysText] = useState('')
+  const [sysText, setSysText] = useState("")
   const [userTextTokens, setUserTextTokens] = useState(0)
-  const [userText, setUserText] = useState('')
+  const [userText, setUserText] = useState("")
   const [messages, setMessages] = useState<MessageWithTokenCount[]>([])
   const [thinking, setThinking] = useState(false)
 
