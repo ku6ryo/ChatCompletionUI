@@ -1,0 +1,130 @@
+.header {
+  position: fixed;
+}
+
+.frame {
+  font-family: Arial, sans-serif;
+
+  height: 100vh;
+  overflow: scroll;
+
+  input, textarea {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.widthAdjuster {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.settingModal {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+
+  .modal {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 14px;
+      width: 300px;
+      margin-bottom: 8px;
+      padding: 8px;
+    }
+  }
+}
+
+.tokens {
+  color: #888;
+  font-size: 11px;
+}
+
+.bottomBar {
+  background-color: rgb(68, 68, 68);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+
+  .inputArea {
+    padding: 10px 0;
+    position: relative;
+
+    textarea {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      padding: 10px;
+      width: calc(100% - 50px);
+    }
+  }
+
+  .submitButton {
+    line-height: 1;
+    font-size: 20px;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+  }
+}
+
+.messageContainer {
+  padding-bottom: 120px;
+
+  .message {
+    border-bottom: 1px solid #ccc;
+    padding: 12px 0 20px;
+    position: relative;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .role {
+      border: 1px solid;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 1;
+      padding: 8px;
+      position: absolute;
+    }
+
+    .text {
+      font-size: 16px;
+      padding-left: 48px;
+    }
+
+    &.assistant {
+      .role {
+        background-color: #ffed46;
+      }
+    }
+    &.user {
+      .role {
+        background-color: #ccc;
+      }
+    }
+  }
+}
