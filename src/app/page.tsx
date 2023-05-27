@@ -139,6 +139,10 @@ export default function Home() {
     deleteSysMessage()
   }
 
+  const onClearHistoryClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+    setMessages([])
+  }
+
   const frameRef = useRef<HTMLDivElement>(null)
 
   return (
@@ -217,6 +221,9 @@ export default function Home() {
             >
               <GrSend />
             </button>
+            <div>
+              <button onClick={onClearHistoryClick}>Clear conversation</button>
+            </div>
           </div>
         </div>
       </div>
