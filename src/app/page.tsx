@@ -122,6 +122,7 @@ export default function Home() {
         { role: "assistant", content: answer, tokens, }
       ])
       setUserText("")
+      setUserTextTokens(0)
     } catch (e) {
     } finally {
       setThinking(false)
